@@ -35,7 +35,7 @@ def saveFile():
     file2 = pd.read_csv(findFile2())
     f2 = file2.rename(columns={'Contact Email': 'Email'})
     
-#open new file and populate it with the updates and changes only. Then, assign the Product Manager anme and ID# to the appropriate entry based on State.
+#open new file and populate it with the updates and changes only. Then, assign the Product Representative name and ID# to the appropriate entry based on State.
     with open(master.filename, 'w') as outFile:
         pd.options.mode.chained_assignment = None
         diff = (f2[~f2.Email.isin(f1.Email)])
